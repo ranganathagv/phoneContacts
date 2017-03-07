@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    var myMoc = NSManagedObjectContext()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -45,6 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: - Core Data stack
+    
+
 
     lazy var persistentContainer: NSPersistentContainer = {
         /*
@@ -77,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func saveContext () {
         let context = persistentContainer.viewContext
-        if context.hasChanges {
+        if (context.hasChanges) {
             do {
                 try context.save()
             } catch {
@@ -88,6 +90,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
+    
+    func getPersistentContainerObj () -> NSPersistentContainer {
+        return persistentContainer
+    }
+    
+    func getManagedObjectContext() -> NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
 }
 

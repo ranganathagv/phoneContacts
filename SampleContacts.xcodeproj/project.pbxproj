@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550A145D1E63FBC00078E8D8 /* ContactsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550A145B1E63FBC00078E8D8 /* ContactsEntity+CoreDataClass.swift */; };
+		550A14601E63FBC00078E8D8 /* ContactsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550A145C1E63FBC00078E8D8 /* ContactsEntity+CoreDataProperties.swift */; };
+		5519D2741E65604F00CAEC00 /* Employee+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519D2721E65604F00CAEC00 /* Employee+CoreDataClass.swift */; };
+		5519D2751E65604F00CAEC00 /* Employee+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519D2731E65604F00CAEC00 /* Employee+CoreDataProperties.swift */; };
 		551CBD921E5DC0D400965E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551CBD911E5DC0D400965E7F /* AppDelegate.swift */; };
 		551CBD941E5DC0D400965E7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551CBD931E5DC0D400965E7F /* ViewController.swift */; };
 		551CBD971E5DC0D400965E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551CBD951E5DC0D400965E7F /* Main.storyboard */; };
@@ -15,6 +19,15 @@
 		551CBD9F1E5DC0D400965E7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551CBD9D1E5DC0D400965E7F /* LaunchScreen.storyboard */; };
 		551CBDAA1E5DC0D400965E7F /* SampleContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551CBDA91E5DC0D400965E7F /* SampleContactsTests.swift */; };
 		551CBDB51E5DC0D400965E7F /* SampleContactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551CBDB41E5DC0D400965E7F /* SampleContactsUITests.swift */; };
+		551CBDC51E5DC13000965E7F /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551CBDC31E5DC13000965E7F /* Contacts.framework */; };
+		551CBDC61E5DC13000965E7F /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551CBDC41E5DC13000965E7F /* ContactsUI.framework */; };
+		553F1F6A1E654FB4006C68A0 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1F681E654FB4006C68A0 /* Person+CoreDataClass.swift */; };
+		553F1F6D1E654FB4006C68A0 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1F691E654FB4006C68A0 /* Person+CoreDataProperties.swift */; };
+		55BA2B871E6E919200FAD31E /* ContactListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA2B861E6E919200FAD31E /* ContactListTVCell.swift */; };
+		55BA79AB1E68435F000104DC /* AddEditContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA79AA1E68435F000104DC /* AddEditContactVC.swift */; };
+		55D6AEFE1E65A4170081242D /* ContactDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6AEFD1E65A4170081242D /* ContactDetailsVC.swift */; };
+		55D6AEFF1E65A4170081242D /* ContactDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6AEFD1E65A4170081242D /* ContactDetailsVC.swift */; };
+		55D6AF001E65A4170081242D /* ContactDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6AEFD1E65A4170081242D /* ContactDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		550A145B1E63FBC00078E8D8 /* ContactsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ContactsEntity+CoreDataClass.swift"; path = "SampleContacts/Model/ContactsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		550A145C1E63FBC00078E8D8 /* ContactsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ContactsEntity+CoreDataProperties.swift"; path = "SampleContacts/Model/ContactsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5519D2721E65604F00CAEC00 /* Employee+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Employee+CoreDataClass.swift"; path = "SampleContacts/Model/Employee+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5519D2731E65604F00CAEC00 /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Employee+CoreDataProperties.swift"; path = "SampleContacts/Model/Employee+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		551CBD8E1E5DC0D400965E7F /* SampleContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		551CBD911E5DC0D400965E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		551CBD931E5DC0D400965E7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +66,13 @@
 		551CBDB01E5DC0D400965E7F /* SampleContactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleContactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		551CBDB41E5DC0D400965E7F /* SampleContactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleContactsUITests.swift; sourceTree = "<group>"; };
 		551CBDB61E5DC0D400965E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		551CBDC31E5DC13000965E7F /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		551CBDC41E5DC13000965E7F /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		553F1F681E654FB4006C68A0 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataClass.swift"; path = "SampleContacts/Model/Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		553F1F691E654FB4006C68A0 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataProperties.swift"; path = "SampleContacts/Model/Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		55BA2B861E6E919200FAD31E /* ContactListTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactListTVCell.swift; path = CustomViews/ContactListTVCell.swift; sourceTree = "<group>"; };
+		55BA79AA1E68435F000104DC /* AddEditContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditContactVC.swift; sourceTree = "<group>"; };
+		55D6AEFD1E65A4170081242D /* ContactDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551CBDC51E5DC13000965E7F /* Contacts.framework in Frameworks */,
+				551CBDC61E5DC13000965E7F /* ContactsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +105,17 @@
 		551CBD851E5DC0D400965E7F = {
 			isa = PBXGroup;
 			children = (
+				5519D2721E65604F00CAEC00 /* Employee+CoreDataClass.swift */,
+				5519D2731E65604F00CAEC00 /* Employee+CoreDataProperties.swift */,
+				553F1F681E654FB4006C68A0 /* Person+CoreDataClass.swift */,
+				553F1F691E654FB4006C68A0 /* Person+CoreDataProperties.swift */,
+				550A145B1E63FBC00078E8D8 /* ContactsEntity+CoreDataClass.swift */,
+				550A145C1E63FBC00078E8D8 /* ContactsEntity+CoreDataProperties.swift */,
 				551CBD901E5DC0D400965E7F /* SampleContacts */,
 				551CBDA81E5DC0D400965E7F /* SampleContactsTests */,
 				551CBDB31E5DC0D400965E7F /* SampleContactsUITests */,
 				551CBD8F1E5DC0D400965E7F /* Products */,
+				551CBDC21E5DC13000965E7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,8 +132,11 @@
 		551CBD901E5DC0D400965E7F /* SampleContacts */ = {
 			isa = PBXGroup;
 			children = (
+				55BA2B851E6E915200FAD31E /* CustomViews */,
 				551CBD911E5DC0D400965E7F /* AppDelegate.swift */,
 				551CBD931E5DC0D400965E7F /* ViewController.swift */,
+				55D6AEFD1E65A4170081242D /* ContactDetailsVC.swift */,
+				55BA79AA1E68435F000104DC /* AddEditContactVC.swift */,
 				551CBD951E5DC0D400965E7F /* Main.storyboard */,
 				551CBD9B1E5DC0D400965E7F /* Assets.xcassets */,
 				551CBD9D1E5DC0D400965E7F /* LaunchScreen.storyboard */,
@@ -126,6 +162,23 @@
 				551CBDB61E5DC0D400965E7F /* Info.plist */,
 			);
 			path = SampleContactsUITests;
+			sourceTree = "<group>";
+		};
+		551CBDC21E5DC13000965E7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				551CBDC31E5DC13000965E7F /* Contacts.framework */,
+				551CBDC41E5DC13000965E7F /* ContactsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55BA2B851E6E915200FAD31E /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				55BA2B861E6E919200FAD31E /* ContactListTVCell.swift */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +243,9 @@
 		551CBD861E5DC0D400965E7F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ranganatha Veeranagappa";
@@ -262,7 +318,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553F1F6D1E654FB4006C68A0 /* Person+CoreDataProperties.swift in Sources */,
+				5519D2751E65604F00CAEC00 /* Employee+CoreDataProperties.swift in Sources */,
+				550A145D1E63FBC00078E8D8 /* ContactsEntity+CoreDataClass.swift in Sources */,
+				55D6AEFE1E65A4170081242D /* ContactDetailsVC.swift in Sources */,
+				55BA2B871E6E919200FAD31E /* ContactListTVCell.swift in Sources */,
 				551CBD9A1E5DC0D400965E7F /* SampleContacts.xcdatamodeld in Sources */,
+				55BA79AB1E68435F000104DC /* AddEditContactVC.swift in Sources */,
+				5519D2741E65604F00CAEC00 /* Employee+CoreDataClass.swift in Sources */,
+				553F1F6A1E654FB4006C68A0 /* Person+CoreDataClass.swift in Sources */,
+				550A14601E63FBC00078E8D8 /* ContactsEntity+CoreDataProperties.swift in Sources */,
 				551CBD941E5DC0D400965E7F /* ViewController.swift in Sources */,
 				551CBD921E5DC0D400965E7F /* AppDelegate.swift in Sources */,
 			);
@@ -273,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				551CBDAA1E5DC0D400965E7F /* SampleContactsTests.swift in Sources */,
+				55D6AEFF1E65A4170081242D /* ContactDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				551CBDB51E5DC0D400965E7F /* SampleContactsUITests.swift in Sources */,
+				55D6AF001E65A4170081242D /* ContactDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +407,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Photon Infotech Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Photon Infotech Inc.";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -389,7 +457,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Photon Infotech Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Photon Infotech Inc.";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -414,9 +483,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Photon Infotech Inc.";
 				INFOPLIST_FILE = SampleContacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Photon.SampleContacts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.photon.longhorn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -426,9 +496,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Photon Infotech Inc.";
 				INFOPLIST_FILE = SampleContacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Photon.SampleContacts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.photon.longhorn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -507,6 +578,7 @@
 				551CBDBB1E5DC0D400965E7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		551CBDBC1E5DC0D400965E7F /* Build configuration list for PBXNativeTarget "SampleContactsTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +587,7 @@
 				551CBDBE1E5DC0D400965E7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		551CBDBF1E5DC0D400965E7F /* Build configuration list for PBXNativeTarget "SampleContactsUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +596,7 @@
 				551CBDC11E5DC0D400965E7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
