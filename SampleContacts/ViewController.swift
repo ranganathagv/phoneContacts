@@ -11,7 +11,7 @@ import Contacts
 import CoreData
 
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NewContactAdded{
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NewContactAdded, ContactDeleted{
 
     @IBOutlet weak var contactsListTV: UITableView!
     var contacts = [CNContact]()
@@ -45,8 +45,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do {
             let result = try moc.fetch(request as! NSFetchRequest<NSFetchRequestResult>)
             self.contactsFromDB = result as! [NSFetchRequestResult]
-            print("Fetched data from DB \(self.contactsFromDB)")
-            return true
+            print("Fetched data count from DB:\(self.contactsFromDB.count) and Data is: \(self.contactsFromDB)")
+            if self.contactsFromDB.count >= 1 {
+                return true
+            } else {
+                return false
+            }
         } catch {
             print("Fetching from DB Failed")
             return false
@@ -169,7 +173,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if (segue.identifier == "contactDetailsSegueId"){
             let cdVc : ContactDetailsVC = segue.destination as! ContactDetailsVC
             cdVc.setContactDetail(cDetail: self.contactsFromDB[(sender as! NSIndexPath).row] as! ContactsEntity)
-
+            cdVc.contactDeletedDelegate = self
         }
         else if (segue.identifier == "addContactSegueId") {
             let adCVc : AddEditContactVC = segue.destination as! AddEditContactVC
@@ -180,6 +184,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func newContactAddedRefreshList() -> Void {
         //TODO:: need to figure out to fetch newly inserted row instead of all list again
+            getDataAndReload()
+    }
+    
+    func contactDeletedRefreshList() {
+        getDataAndReload()
+    }
+    
+    func contactEdittedRefreshList() {
+        getDataAndReload()
+    }
+    
+    func getDataAndReload () -> Void {
         getRowsFromDB()
         
         DispatchQueue.global(qos: .userInitiated).async {
@@ -187,7 +203,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.contactsListTV.reloadData()
             }
         }
-        
+
     }
     
     override func didReceiveMemoryWarning() {

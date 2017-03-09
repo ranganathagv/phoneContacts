@@ -252,6 +252,7 @@
 				TargetAttributes = {
 					551CBD8D1E5DC0D400965E7F = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = RGTKD5NWZ9;
 						ProvisioningStyle = Automatic;
 					};
 					551CBDA41E5DC0D400965E7F = {
@@ -483,11 +484,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Photon Infotech Inc.";
+				CODE_SIGN_IDENTITY = "iPhone Developer: gvranganatha@gmail.com (NXGHTRBGGT)";
+				DEVELOPMENT_TEAM = RGTKD5NWZ9;
 				INFOPLIST_FILE = SampleContacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.photon.longhorn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gvr.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -496,11 +499,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Photon Infotech Inc.";
+				CODE_SIGN_IDENTITY = "iPhone Developer: gvranganatha@gmail.com (NXGHTRBGGT)";
+				DEVELOPMENT_TEAM = RGTKD5NWZ9;
 				INFOPLIST_FILE = SampleContacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.photon.longhorn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gvr.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var myMoc = NSManagedObjectContext()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -91,6 +91,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    func saveOtherContext(contextToSave:NSManagedObjectContext) {
+//        if contextToSave.hasChanges {
+            do {
+                try contextToSave.save()
+            } catch  {
+                let nCError = error as NSError
+                fatalError("Unresolved error while saving new context \(nCError), \(nCError.userInfo)")
+            }
+//        }
+    }
     
     func getPersistentContainerObj () -> NSPersistentContainer {
         return persistentContainer

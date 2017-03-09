@@ -34,8 +34,27 @@ class AddEditContactVC: UIViewController, UITextFieldDelegate {
             self.emailTF.text = self.contactDetailsParams.emailAddress
         }
         
-    }
+        let pCoOrdinator =  (UIApplication.shared.delegate as! AppDelegate).persistentContainer.persistentStoreCoordinator
+        var bgMoC = NSManagedObjectContext.init(concurrencyType:NSManagedObjectContextConcurrencyType.privateQueueConcurrencyType)
+        bgMoC.persistentStoreCoordinator = pCoOrdinator
 
+        
+        NotificationCenter.default.addObserver(self, selector:#selector(AddEditContactVC.persistentStoreCoordinatorDidSave(notification:)), name: Notification.Name.NSManagedObjectContextDidSave, object: pCoOrdinator)
+        
+    }
+    
+    func persistentStoreCoordinatorDidSave(notification: NSNotification) {
+        let dictionary = notification.userInfo!
+        print(dictionary)
+        let moc: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        DispatchQueue.main.async {
+            moc.mergeChanges(fromContextDidSave: notification as Notification)
+        }
+//        moc.perform { () -> Void in
+//          moc.mergeChanges(fromContextDidSave: notification as Notification)
+//        }
+    }
     func setContactDetail(cDetail:ContactsEntity) -> Void {
         self.contactDetailsParams = cDetail
     }
@@ -47,21 +66,28 @@ class AddEditContactVC: UIViewController, UITextFieldDelegate {
     @IBAction func doneButtonAction(_ sender: Any) {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
         let moc = appDelegate.persistentContainer.viewContext
+        
         if (!forEdit.isEmpty && forEdit == "YES"  ) { // edit existing Contact
             
-            let newMoc = appDelegate.persistentContainer.newBackgroundContext()
-            contactDetailsParams.givenName = nameTF.text
-            contactDetailsParams.phoneNumber = phoneNumTF.text
-            contactDetailsParams.emailAddress = emailTF.text
+//            let pCoOrdinator =  (UIApplication.shared.delegate as! AppDelegate).persistentContainer.persistentStoreCoordinator
+            
+            //                let bgMoC = appDelegate.persistentContainer.newBackgroundContext()
+
+            
+//            DispatchQueue.global(qos: .background).async {
+//                bgMoC.persistentStoreCoordinator = pCoOrdinator
+                self.contactDetailsParams.givenName = self.nameTF.text
+                self.contactDetailsParams.phoneNumber = self.phoneNumTF.text
+                self.contactDetailsParams.emailAddress = self.emailTF.text
+                
+//                appDelegate.saveOtherContext(contextToSave: bgMoC)
+                appDelegate.saveContext()
+                self.newConatctAddedDelegate?.contactEditted!(cE: self.contactDetailsParams)
+//            }
+            
 //            appDelegate.saveContext()
-            
-            newMoc.perform(
-                newMoc.save as! () -> Void
-            )
-            
-            newConatctAddedDelegate?.contactEditted!(cE: contactDetailsParams)
+//            newConatctAddedDelegate?.contactEditted!(cE: contactDetailsParams)
             
             
         } else { // add new contact to DB
@@ -95,6 +121,15 @@ class AddEditContactVC: UIViewController, UITextFieldDelegate {
         
     }
     
+//    func persistentStoreDidImportUbiquitousContentChanges(notification: NSNotification) {
+//        let dictionary = notification.userInfo!
+//        println(dictionary)
+//        var moc: NSManagedObjectContext = self.managedObjectContext!
+//        moc.performBlock { () -> Void in
+//            moc.mergeChangesFromContextDidSaveNotification(notification)
+//        }
+//    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

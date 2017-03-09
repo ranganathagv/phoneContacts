@@ -9,14 +9,19 @@
 import UIKit
 
 
-class ContactDetailsVC: UIViewController, NewContactAdded {
+@objc protocol ContactDeleted {
+    @objc optional func contactDeletedRefreshList() -> Void
+    @objc optional func contactEdittedRefreshList() -> Void
+}
+
+class ContactDetailsVC: UIViewController, ContactDeleted, NewContactAdded {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var phoneNumberTF: UITextField!
     @IBOutlet weak var emailIdTF: UITextField!
     var contactDetailsParams = ContactsEntity()
-    var contactEditedDelegate : NewContactAdded!
+    var contactDeletedDelegate : ContactDeleted!
     
     
     override func viewDidLoad() {
@@ -52,23 +57,22 @@ class ContactDetailsVC: UIViewController, NewContactAdded {
     
     @IBAction func deleteButtonAction(_ sender: Any) {
         
-        
-//        let cListVc = ViewController()
-//        self.contactEditedDelegate = cListVc
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let moc = appDelegate.persistentContainer.viewContext
-        
         moc.delete(contactDetailsParams)
         appDelegate.saveContext()
+        contactDeletedDelegate?.contactDeletedRefreshList!()
         _ = self.navigationController?.popViewController(animated: true)
-//        contactEditedDelegate?.newContactAddedRefreshList!()
     }
 }
 
 extension ContactDetailsVC  {
     @objc func contactEditted(cE: ContactsEntity) {
-        nameTF.text = cE.givenName
-        phoneNumberTF.text = cE.phoneNumber
-        emailIdTF.text = cE.emailAddress
+        DispatchQueue.main.async {
+            self.nameTF.text = cE.givenName
+            self.phoneNumberTF.text = cE.phoneNumber
+            self.emailIdTF.text = cE.emailAddress
+            self.contactDeletedDelegate?.contactEdittedRefreshList!()
+        }
     }
 }
