@@ -492,7 +492,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.photon.longhorn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "706f26ca-67a6-4cf2-8d39-6bc6a49e1b0b";
-				PROVISIONING_PROFILE_SPECIFIER = "Longhorn Dev Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "Longhorn-DistProfile";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
