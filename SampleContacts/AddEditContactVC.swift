@@ -35,7 +35,7 @@ class AddEditContactVC: UIViewController, UITextFieldDelegate {
         }
         
         let pCoOrdinator =  (UIApplication.shared.delegate as! AppDelegate).persistentContainer.persistentStoreCoordinator
-        var bgMoC = NSManagedObjectContext.init(concurrencyType:NSManagedObjectContextConcurrencyType.privateQueueConcurrencyType)
+        let bgMoC = NSManagedObjectContext.init(concurrencyType:NSManagedObjectContextConcurrencyType.privateQueueConcurrencyType)
         bgMoC.persistentStoreCoordinator = pCoOrdinator
 
         
@@ -71,24 +71,17 @@ class AddEditContactVC: UIViewController, UITextFieldDelegate {
         if (!forEdit.isEmpty && forEdit == "YES"  ) { // edit existing Contact
             
 //            let pCoOrdinator =  (UIApplication.shared.delegate as! AppDelegate).persistentContainer.persistentStoreCoordinator
+//            let bgMoC = appDelegate.persistentContainer.newBackgroundContext()
+////            let bgMoc = NSManagedObjectContext.init(concurrencyType: NSManagedObjectContextConcurrencyType.privateQueueConcurrencyType)
+//            bgMoC.persistentStoreCoordinator = pCoOrdinator
             
-            //                let bgMoC = appDelegate.persistentContainer.newBackgroundContext()
-
-            
-//            DispatchQueue.global(qos: .background).async {
-//                bgMoC.persistentStoreCoordinator = pCoOrdinator
                 self.contactDetailsParams.givenName = self.nameTF.text
                 self.contactDetailsParams.phoneNumber = self.phoneNumTF.text
                 self.contactDetailsParams.emailAddress = self.emailTF.text
-                
+            
 //                appDelegate.saveOtherContext(contextToSave: bgMoC)
                 appDelegate.saveContext()
-                self.newConatctAddedDelegate?.contactEditted!(cE: self.contactDetailsParams)
-//            }
-            
-//            appDelegate.saveContext()
-//            newConatctAddedDelegate?.contactEditted!(cE: contactDetailsParams)
-            
+                self.newConatctAddedDelegate?.contactEditted!(cE: self.contactDetailsParams)            
             
         } else { // add new contact to DB
             let newcE = NSEntityDescription.insertNewObject(forEntityName: "ContactsEntity", into: moc) as! ContactsEntity

@@ -252,8 +252,8 @@
 				TargetAttributes = {
 					551CBD8D1E5DC0D400965E7F = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = RGTKD5NWZ9;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = M72NAL3U5D;
+						ProvisioningStyle = Manual;
 					};
 					551CBDA41E5DC0D400965E7F = {
 						CreatedOnToolsVersion = 8.2;
@@ -408,8 +408,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Photon Infotech Inc.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Photon Infotech Inc.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -484,13 +484,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: gvranganatha@gmail.com (NXGHTRBGGT)";
-				DEVELOPMENT_TEAM = RGTKD5NWZ9;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Photon Infotech Inc.";
+				DEVELOPMENT_TEAM = M72NAL3U5D;
 				INFOPLIST_FILE = SampleContacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gvr.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.photon.longhorn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "706f26ca-67a6-4cf2-8d39-6bc6a49e1b0b";
+				PROVISIONING_PROFILE_SPECIFIER = "Longhorn Dev Profile";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -499,13 +501,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: gvranganatha@gmail.com (NXGHTRBGGT)";
-				DEVELOPMENT_TEAM = RGTKD5NWZ9;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Photon Infotech Inc.";
+				DEVELOPMENT_TEAM = M72NAL3U5D;
 				INFOPLIST_FILE = SampleContacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gvr.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.photon.longhorn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "706f26ca-67a6-4cf2-8d39-6bc6a49e1b0b";
+				PROVISIONING_PROFILE_SPECIFIER = "Longhorn-DistProfile";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

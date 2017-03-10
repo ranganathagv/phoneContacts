@@ -92,14 +92,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func saveOtherContext(contextToSave:NSManagedObjectContext) {
-//        if contextToSave.hasChanges {
+        if contextToSave.hasChanges {
             do {
                 try contextToSave.save()
             } catch  {
                 let nCError = error as NSError
                 fatalError("Unresolved error while saving new context \(nCError), \(nCError.userInfo)")
             }
-//        }
+        }
     }
     
     func getPersistentContainerObj () -> NSPersistentContainer {
