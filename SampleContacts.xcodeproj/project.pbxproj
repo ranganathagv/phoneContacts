@@ -485,14 +485,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Photon Infotech Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = M72NAL3U5D;
 				INFOPLIST_FILE = SampleContacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.photon.longhorn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "706f26ca-67a6-4cf2-8d39-6bc6a49e1b0b";
-				PROVISIONING_PROFILE_SPECIFIER = "Longhorn-DistProfile";
+				PROVISIONING_PROFILE = "67d092cc-90b1-44e3-9bb4-96962f27a34a";
+				PROVISIONING_PROFILE_SPECIFIER = "Longhorn Dev Profile";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -502,6 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Photon Infotech Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Photon Infotech Inc.";
 				DEVELOPMENT_TEAM = M72NAL3U5D;
 				INFOPLIST_FILE = SampleContacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
