@@ -3,14 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>teamID</key>
-	<string>M72NAL3U5D</string>
+	<string>M72NAL3U5D1</string>
 	<key>method</key>
 	<string>enterprise</string>
 	<key>uploadSymbols</key>
 	<string>YES</string>
-	<key>exportProvisioningProfile</key>
-	<string>/Users/Shared/Jenkins/Library/MobileDevice/Provisioning Profiles/sdkf/LonghornDistProfile.mobileprovision</string>
-	<key>exportSigningIdentity</key>
-	<string>iPhone Distribution:  Infotech Inc.</string>
 </dict>
 </plist>
