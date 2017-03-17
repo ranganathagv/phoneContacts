@@ -5,12 +5,8 @@
 	<key>teamID</key>
 	<string>M72NAL3U5D</string>
 	<key>method</key>
-	<string>ad-hoc</string>
+	<string>enterprise</string>
 	<key>uploadSymbols</key>
-	<true/>
-	<key>exportProvisioningProfile</key>
-	<string>LonghornDistProfile.mobileprovision</string>
-	<key>exportsigningIdentity</key>
-	<string>iPhone Distribution: Photon Infotech Inc.</string>
+	<string>YES</string>
 </dict>
 </plist>
