@@ -8,8 +8,6 @@
 	<string>ad-hoc</string>
 	<key>uploadSymbols</key>
 	<true/>
-	<key>exportFormat</key>
-	<string>IPA</string>
 	<key>exportProvisioningProfile</key>
 	<string>LonghornDistProfile.mobileprovision</string>
 	<key>exportsigningIdentity</key>
