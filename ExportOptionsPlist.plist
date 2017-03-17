@@ -8,5 +8,11 @@
 	<string>enterprise</string>
 	<key>uploadSymbols</key>
 	<string>YES</string>
+	<key>exportProvisioningProfile</key>
+	<string>/Users/Shared/Jenkins/Library/MobileDevice/Provisioning Profiles/LonghornDistProfile.mobileprovision</string>
+	<key>exportSigningIdentity</key>
+	<string>iPhone Distribution: Photon Infotech Inc.</string>
+	<key>exportFormat</key>
+	<string>IPA</string>
 </dict>
 </plist>
