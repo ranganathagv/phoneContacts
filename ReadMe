@@ -1,0 +1,13 @@
+If we are using Xcode 9 onwards and Exporting archive through jenkins/commandline 
+We need to add one more key to ExportOptionsPlist.plist file 
+
+provisioningProfiles  <its a dictionary>
+  com.companyName.appName <key>      Provisioning_Profile_Name <value>
+  
+  
+ Since Xcode 9, builds that use manual code signing require that a provisioning profile is specified in the exportOptions.plist when performing an export operation.
+The help for xcodebuild in Xcode 9 states:
+provisioningProfiles : Dictionary 
+For manual signing only. Specify the provisioning profile to use for each executable in your app. Keys in this dictionary are the bundle identifiers of executables; values are the provisioning profile name or UUID to use.
+It would probably require an extra field in the xcodebuild plugin config to allow a profile to be specified by name orUUID, and if specified, include it in the generated exportOptions plist. Or, possibly allow the option of specifying your own exportOptionsPlist that is used instead of the generated one, if specified.
+Without this option, projects that use manual code signing cannot build with jenkins and this plugin.
